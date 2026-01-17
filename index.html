@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">    
+    <h1>POMODORO TIMER</h1>
+    <div class="session-label" id="sessionLabel">WORK MODE</div>
+    <h1 id="timer" class="press-start-2p-regular">25:00</h1>
+    
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <p id="progressText">0% COMPLETE</p>
+
+<div class="buttons">
+  <button class="start-btn" id="start">START</button>
+  <button class="reset-btn" id="reset">
+    <img src="assets/laptop-pixel.png" alt="Laptop" class="icon laptop">
+  </button>
+  <button class="break-btn" id="break">
+    <img src="assets/redbull-pixel.png" alt="Red Bull" class="icon redbull">
+  </button>
+</div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>
