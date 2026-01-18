@@ -1,0 +1,145 @@
+body {
+  font-family: "Press Start 2P", system-ui;
+  background: #FFA5D6;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+  /* Use a darker anchor for readability across the UI */
+  color: #F77FBE;
+}
+
+.container {
+  background: #FFD6EE;
+  padding: 40px 50px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.container h1:first-of-type {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 1.5em;
+  color: #F77FBE;
+  text-shadow: 0 0 6px #FFF0F1;
+}
+
+/* SESSION LABEL */
+.session-label {
+  display: inline-block;
+  padding: 8px 15px;
+  border-width: 2px;
+  border-style: dashed;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+  background: #FCE5F5;
+  color: #F77FBE;              
+  text-shadow: 0 0 6px #FFF0F1;
+}
+
+.session-label.work {
+  border-color: #A7ABDE;       
+  color: #6A63C9;              
+}
+
+.session-label.break {
+  border-color: #FFA5D6;       
+  color: #C94A86;              
+}
+
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.start-btn {
+  background: #FFA5D6;
+  font-size: 0.9em;
+  padding: 16px 28px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Press Start 2P", system-ui;
+  transition: all 0.2s;
+  color: #FFE7F5;
+  box-shadow: 0 6px 0 rgba(79, 54, 91, 0.35);
+}
+
+.start-btn:hover {
+  transform: scale(1.15);
+  background: #FFE7F5;
+  color: #FFA5D6;
+}
+
+.reset-btn,
+.break-btn {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.reset-btn img.icon,
+.break-btn img.icon {
+  height: 60px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.2s;
+}
+
+.reset-btn:hover img.icon,
+.break-btn:hover img.icon {
+  animation: wiggle 0.5s;
+}
+
+#timer {
+  font-size: 3.5em;
+  font-weight: bold;
+  color: #F77FBE;              
+  text-shadow: 0 0 10px #FFF0F1;
+  margin: 20px 0;
+}
+
+.progress-container {
+  background: #F8E7FA;
+  border-radius: 20px;
+  height: 14px;
+  width: 100%;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #FEC3E1, #A7ABDE);
+  transition: width 0.3s;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.status {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #F77FBE;
+  text-shadow: 0 0 6px #FFF0F1;
+}
